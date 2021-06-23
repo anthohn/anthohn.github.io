@@ -1,0 +1,464 @@
+/**
+* ETML
+* Auteur      : Anthony Höhn
+* Date        : 21.06.2021
+* Description : style du html
+**/
+
+:root {
+	--mainBackground1-color: #fff2df;
+	--mainBackground2-color: #b8b8b8;
+	--mainBackground3-color: #646464;
+
+	--navBackground-color: #EDE9E9;
+	--navFont-color: #0d1117;
+	--navActiveBackground: #FFFFFF;
+
+	--boxBackground-color: #FFFFFF;
+	--boxShadow-color: none;
+
+	--text-color: #000000;
+	--inconBackground: #6ed28c;
+
+	--sun-color: #FFDE00;
+	--sunshine1-color: #FFDE0080;
+	--sunshine2-color: #FFDE0040;
+	--sunshine3-color: #FFDE0020;
+	--sunshine4-color: #FFDE0010;
+	--sunshine5-color: #FFDE0000;
+
+
+
+	--moon-color: none;
+	--star-color: none;
+	--starShadow-color: none;
+
+	--twitterInBackground-color: #36B9FF;
+	--linkedInBackground-color: #0186be;
+}
+
+.dark-mode {
+	--mainBackground1-color: #727272;
+	--mainBackground2-color: #1f1f1f;
+	--mainBackground3-color: #000000;
+	
+	--navBackground-color: #090C10;
+	--navFont-color: #FEFEFF;
+	--navActiveBackground: #21262D;
+
+	--boxBackground-color: #090C10;
+	--boxShadow-color: #30363d;
+
+	--text-color: #F0F2F8;
+	--inconBackground: none;
+
+	--sun-color: none;
+	--sunshine1-color: none;
+	--sunshine2-color: none;
+	--sunshine3-color: none;
+	--sunshine4-color: none;
+	--sunshine5-color: none;
+	--sunshine6-color: none;
+
+
+
+	--moon-color: #FFDE00;
+	--star-color: #ffffff;
+	--starShadow-color: #ffffff;
+
+
+
+	--twitterInBackground-color: #090C10;
+	--linkedInBackground-color: #090C10;
+
+  }
+
+body{
+	background-color: #FFF;
+	background-image: radial-gradient(circle, var(--mainBackground1-color) 0%, var(--mainBackground2-color) 70%, var(--mainBackground3-color) 100%);
+	background-color: var(--mainBackground-color);
+}
+
+* {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/**NAVBAR**/
+
+header {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+nav {
+	position: fixed;
+	z-index: 3;
+	margin-top: 50px;
+	top: 0;
+}
+
+ul {
+	padding: 2px;
+	box-shadow: var(--boxShadow-color) 0px 0px 0px 2px inset;
+
+}
+
+ul, li {
+	border-radius: 20px;
+	background-color: var(--navBackground-color);
+}
+
+ul li, a {
+	text-align: center;
+	display: inline-block;
+	margin: 0 2px;
+	padding: 7px;
+	text-decoration: none;
+	color: var(--navFont-color);
+}
+
+#active{
+	width: 100%;
+	border-radius: 15px;
+	background-color: var(--navActiveBackground);
+}
+
+/**CONTAINER**/
+
+.container{
+	margin: 160px 0 0 0;
+	width: 60%;
+	margin-left: 20%;
+}
+
+.container-flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.container-flex .aboutMe, .dontKnow, .linkedIn, .gitHub, .twitter, .darkMode, .skills {
+	z-index: 2;
+	box-shadow: var(--boxShadow-color) 0px 0px 0px 2px inset;
+	background-color: var(--boxBackground-color);
+	color: var(--text-color);
+	height: 265px;
+	width: 265px;
+	margin: 10px;
+	border-radius: 20px;
+}
+
+.container-flex .aboutMe {
+	width: 550px;
+}
+
+.container-flex .aboutMe img {
+	display: flex;
+	margin-top: 10px;
+	height: 160px;
+}
+
+.container-flex .aboutMe h3{
+	margin: 0 0 0 40px;
+	font-size: 30px;
+}
+
+.container-flex .aboutMe p{
+	margin: 0 0 0 40px;
+	font-size: 15px;
+}
+
+.container-flex .linkedIn{
+	background-color: var(--linkedInBackground-color);
+}
+
+.container-flex .linkedIn a, .gitHub a, .twitter a{
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	height: 265px;
+	width: 265px;
+}
+
+.container-flex .gitHub {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container-flex .twitter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--twitterInBackground-color);
+}
+
+.container-flex .skills{
+	align-content: flex-start;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+
+}
+
+.container-flex .skills .php, .sql, .c, .html, .css, .js{
+	display: flex;
+	align-items: center;
+	background-color: var(--inconBackground);
+	border-radius: 10px;
+	height: 47px;
+	width: 50px;
+	margin: 7px;
+	padding: 5px;
+	justify-content: center;
+}
+
+.container-flex .skills svg{
+	height: 40px;
+	width: 40px;
+
+}
+
+.container-flex .skills h2{
+	width: 265px;
+	display: flex;
+	justify-content: center;
+	margin: 25px 0 25px 0;
+}
+
+
+
+
+.darkMode {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.moonShadow{
+	position: absolute;
+	margin: auto;
+	top: 250px;
+	right: 200px;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	filter: blur(15px);
+	box-shadow: 25px 10px 0px 0px var(--moon-color); 
+	animation: moonSpin 60s linear infinite;
+}
+
+.moon{
+	position: absolute;
+	margin: auto;
+	top: 250px;
+	right: 200px;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	box-shadow: 25px 10px 0px 0px var(--moon-color); 
+	animation: moonSpin 60s linear infinite;
+}
+
+
+.star{
+	position: absolute;
+	margin: auto;
+	width: 3px;
+	height: 3px;
+	border-radius: 50%;
+	box-shadow: 25px 10px 0px 0px var(--star-color); 
+	animation: starSpin 160s linear infinite;
+}
+
+#star1{
+	top: 240px;
+	right: 440px;
+}
+#star2{
+	top: 270px;
+	right: 170px;
+}
+#star3{
+	top: 210px;
+	right: 100px;
+}
+#star4{
+	top: 100px;
+	right: 270px;
+}
+#star5{
+	top: 10px;
+	right: 170px;
+}
+#star6{
+	top: 210px;
+	right: 270px;
+}
+
+
+
+@keyframes moonSpin {
+	from {
+	  transform: rotate(30deg) translate(180px);
+	}
+	to {
+	  transform: rotate(0deg) translate(-1800px);
+	}
+}
+
+@keyframes starSpin {
+	from {
+	  transform: rotate(30deg) translate(110px);
+	}
+	to {
+	  transform: rotate(0deg) translate(-1800px);
+	}
+  }
+
+
+
+.sun {
+	position: absolute;
+	margin: auto;
+	top: 267px;
+	right: 177px;
+	width: 110px;
+	height: 110px;
+	background-color: var(--sun-color);
+	border-radius: 50%;
+	box-shadow:
+		0 0 0 20px var(--sunshine1-color),
+		0 0 0 40px var(--sunshine2-color),
+		0 0 0 60px var(--sunshine3-color),
+		0 0 0 80px var(--sunshine4-color),
+		0 0 0 100px var(--sunshine5-color),
+		0 0 40px 100px var(--sunshine4-color);
+	animation:
+		sunriseDeplacement 60s linear infinite,
+		sunrise 2s infinite linear forwards,
+		rays 2s 2s infinite linear;
+}
+
+@keyframes sunriseDeplacement {
+	from {
+		transform: rotate(30deg) translate(180px);
+	}
+	to {
+		transform: rotate(0deg) translate(-1800px);
+	}
+}
+
+@keyframes sunrise {
+	0% {
+		box-shadow: none;
+	}
+}
+
+@keyframes rays {
+	0% {
+		box-shadow: 
+		0 0 0 0 var(--sunshine1-color),
+		0 0 0 20px var(--sunshine1-color),
+		0 0 0 40px var(--sunshine2-color),
+		0 0 0 60px var(--sunshine3-color),
+		0 0 0 80px var(--sunshine4-color),
+		0 0 40px 100px var(--sunshine4-color);
+	}
+	100% {
+		box-shadow: 
+		0 0 0 20px var(--sunshine1-color),
+		0 0 0 40px var(--sunshine2-color),
+		0 0 0 60px var(--sunshine3-color),
+		0 0 0 80px var(--sunshine4-color),
+		0 0 0 100px var(--sunshine5-color),
+		0 0 40px 100px var(--sunshine4-color);
+	}
+}
+
+
+.cloud {
+    background: rgb(222, 237, 248);
+    border-radius: 200px;
+    box-shadow:0 1px 1px rgba(0,0,0,0.1);
+    height: 39px;
+    margin-right: 0;
+    position: absolute;
+    right: 0%;
+    width: 102px;
+}
+
+
+
+
+
+
+
+
+.switch {
+  	position: relative;
+  	display: inline-block;
+  	width: 80px;
+ 	height: 44px;
+}
+
+.switch input { 
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #e6e6e6;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.slider:before {
+  	position: absolute;
+  	content: "";
+ 	height: 36px;
+ 	width: 36px;
+  	left: 4px;
+  	bottom: 4px;
+  	background-color: #000000;
+  	-webkit-transition: .4s;
+  	transition: .4s;
+}
+
+input:checked + .slider {
+	box-shadow: var(--boxShadow-color) 0px 0px 0px 2px inset;
+  	background-color: #21262D;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(35px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
